@@ -1,0 +1,57 @@
+// ==UserScript==
+// @name        Night mode 9gag
+// @namespace   9gag.com
+// @description Changes colors to not so gay
+// @include     http://9gag.com/
+// @version     1
+// @grant       none
+// ==/UserScript==
+/* TODO:
+// zdefiniowac zmienna kolor (tła) i dac tez do liczby punktów, diva w pojedynczym obrazku i spanie
+// zmienic tło komentarzy i tylko kolor takstu
+  // dostac sie do clasy z tekstem nagłówka i tylko to zmieniac
+  // kolor textu komenrarzy dziedziczy z body
+  // wywalic białe okno na dole po prawej dispaly none
+  // wywalic całą prawa kolumnę i dac obrazki na srodek
+  // przy zmniejszeniu okno nie daje na srodek
+   // szerokosc strony  i wedłog tego przesówac albo margin 0 auto
+   // transparentne tło dla liczby głosów
+  */
+
+$(document).ready(function(){
+  
+  var numChanges = 0;
+  
+  var changeHeadingColorVar = setInterval(function () {
+    //$('a').css("color", "#ddd"); // kolor tekstów nagłówka zdjęc
+    $("a.badge-evt").css("color", "#999");
+    // a hover i inne okodowac
+  },1000);
+  
+  
+  
+  $('body').css("background-color", "#222"); //tło strony
+  
+  $("h2.badge-item-title").css("color", "#ddd"); // kolor tekstów nagłówka w pojedynczych zdjeciach
+  
+  $(".badge-entry-toolbar-sticky").css("background-color", "#333"); // zmiana koloru w pojedynczym zdjeciu pod strzałkami
+  $("span").css("background-color", "#333"); // zmiana koloru pod "up"
+  
+  
+  // usuwamy prawą kolumnę
+  $("ul#jsid-featured-item-container").css("display","none");
+  $("div#jsid-featured-sidebar-tail").css("display","none");
+  $(".block-feature-cover").css("display","none");
+  $("#sidebar").css("display","none");
+  
+  // przesuniecie lewje kolumny na srodek TODO
+  //$("div.main-wrap").css({"position":"relative", "margin":"0 auto"});
+  $("div.main-wrap").css({"position":"relative", "left":"200px"});
+  //$("div.main-wrap").css({"position":"absolute", "margin":"0 auto"});
+ 
+  //komentarze 
+  // komentarze dziedzicza kolor czcionki z body
+  $(".post-text-area badge-post-textarea").css("background-color", "#333"); 
+
+  
+});
