@@ -14,7 +14,7 @@ Script changes layout of the page 9gag.com with it's subpages to "night-mode"
 3. Next You wanna create "New Script" clicking this option in the pop-up menu.
 4. Type in Name and description as You wish
 5. In Namespace type "9gag.com" (without the quotation marks)
-6. In Includes type "http://9gag.com/\*" (without the quotation marks) so the script will be working on all subpages of 9gag
+6. In Includes type "http://9gag.com/*" (without the quotation marks) so the script will be working on all subpages of 9gag
 7. Now paste in the editor code in "zmianaTla".
 8. Click save. After that script should be running every time you enter 9gag
 9. Profit
