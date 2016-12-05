@@ -51,6 +51,7 @@ $(document).ready(function(){
   // przesuniecie lewje kolumny na srodek TODO
   //$("div.main-wrap").css({"position":"relative", "left":"200px"});
   $(".main-wrap").css({"float": "none", "margin": "0 auto"});
+  $(".page").css("width","100%");
   
   // znika dziwny napis po lewj na górze
   $("ul.flex").find(".new").css("display", "none"); 
