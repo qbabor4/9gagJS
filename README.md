@@ -8,6 +8,7 @@ Script changes layout of the page 9gag.com with it's subpages to "night-mode"
 ## How to use:
 
 1. First of all You have to install Mozilla Firefox and Greasemonkey plugin. *( You can do it with Tampermonkey on Chrome and the steps are quite similar)*
+
 *My script was written on Greasemonkey 3.9 but should run on every versions with JQuery included.*
 
 2. Click on down faced arrow next to the Greasemonkey icon on the plugin bar in your browser.
