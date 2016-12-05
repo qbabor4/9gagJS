@@ -14,29 +14,35 @@
   // wywalic białe okno na dole po prawej dispaly none
   // wywalic całą prawa kolumnę i dac obrazki na srodek
   // przy zmniejszeniu okno nie daje na srodek
-   // szerokosc strony  i wedłog tego przesówac albo margin 0 auto
-   // transparentne tło dla liczby głosów
+   // szerokosc strony i na zmianie   i według tego przesuwac albo margin 0 auto
+   //share on facebook i twitter inny kolor
+   // hot i fresh inny hover color
+   // zmienic kolor urzytkonika
   */
 
 $(document).ready(function(){
   
-  var numChanges = 0;
+  var wid = $(window).width(); // szerokosc strony
   
   var changeHeadingColorVar = setInterval(function () {
-    //$('a').css("color", "#ddd"); // kolor tekstów nagłówka zdjęc
-    $("a.badge-evt").css("color", "#999");
-    // a hover i inne okodowac
+    // kolor tekstów nagłówka zdjęc
+    $("a.badge-evt").css("color", "#999"); // kolor tekstu punktów i pod facebookiem
+    $("div.badge-share-bar").find("a").css("color", "#e9e9e9");
+    var wid = $(window).width(); // szerokosc strony
+      
+    
+    
   },1000);
   
   
   
   $('body').css("background-color", "#222"); //tło strony
   
-  $("h2.badge-item-title").css("color", "#ddd"); // kolor tekstów nagłówka w pojedynczych zdjeciach
+  $("h2.badge-item-title").css("color", "#999"); // kolor tekstów nagłówka w pojedynczych zdjeciach
   
-  $(".badge-entry-toolbar-sticky").css("background-color", "#333"); // zmiana koloru w pojedynczym zdjeciu pod strzałkami
-  $("span").css("background-color", "#333"); // zmiana koloru pod "up"
-  
+  $(".badge-entry-toolbar-sticky").css("background-color", "#222"); // zmiana koloru w pojedynczym zdjeciu pod strzałkami
+  $("span").css("background-color", "#222"); // zmiana koloru pod "up"
+  $(".CS3").css("background-color", "#0c060600");
   
   // usuwamy prawą kolumnę
   $("ul#jsid-featured-item-container").css("display","none");
@@ -45,13 +51,23 @@ $(document).ready(function(){
   $("#sidebar").css("display","none");
   
   // przesuniecie lewje kolumny na srodek TODO
-  //$("div.main-wrap").css({"position":"relative", "margin":"0 auto"});
-  $("div.main-wrap").css({"position":"relative", "left":"200px"});
-  //$("div.main-wrap").css({"position":"absolute", "margin":"0 auto"});
+  //$("div.main-wrap").css({"position":"relative", "left":"150px"});
+  $(".main-wrap").css({"float": "none", "margin": "0 auto"});
+    
+  // znika dziwny napis po lewj na górze
+  $("ul.flex").find(".new").css("display", "none"); 
  
   //komentarze 
   // komentarze dziedzicza kolor czcionki z body
-  $(".post-text-area badge-post-textarea").css("background-color", "#333"); 
+  $(".post-text-area badge-post-textarea").css("background-color", "#222"); 
 
+  
+  
+  $(".CS3").ready(function(){
+    $(".CS3").css("background-color", "transparent"); //#0c060600
+    $(".CS3").css("color", "#999"); // kolor kometarzy
+    //$(this).find("a").css("color", "#8A8A8A");
+    
+  });
   
 });
