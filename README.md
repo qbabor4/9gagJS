@@ -20,4 +20,6 @@ First of all You have to install Mozilla Firefox and Greasemonkey plugin. *( You
 8. Now paste in the editor code in "firefox version" or "chrome version"
 9. Click save. After that script should be running every time you enter 9gag
 10. Profit
+11. If still doesn't work go to "Manage User Scripts.." , click preferences and in Included Pages add "http://9gag.com/*"
+ 
 
